@@ -15,7 +15,7 @@ import copy
 
 
 #---------GET DATA-----------------------------------------------------------------------
-interacting_drugs = '/Users/mkocher/Desktop/ARTChat/data/interacting_drug.txt'
+interacting_drugs = './interacting_drug.txt'
 interacting_drugs_list = []
 with open(interacting_drugs) as csv_file:
     csv_reader = csv.reader(csv_file,delimiter=';')
@@ -24,13 +24,13 @@ with open(interacting_drugs) as csv_file:
 
 
 #Pickle Dump:
-with open('/Users/mkocher/Desktop/ARTChat/pickled_data/ranks_dist.pkl','rb') as f: ranks_dist = pickle.load(f)
-reduced_list = pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/reduced_list.pkl")
-principal_df9 = pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/principal_df9.pkl")
-dd_compiled_art= pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/dd_compiled_art.pkl")
-dd_compiled = pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/dd_compiled.pkl")
-cluster_results=pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/cluster_results.pkl")
-drugs_art=pd.read_pickle("/Users/mkocher/Desktop/ARTChat/pickled_data/drugs_art.pkl")
+with open('./ranks_dist.pkl','rb') as f: ranks_dist = pickle.load(f)
+reduced_list = pd.read_pickle("./reduced_list.pkl")
+principal_df9 = pd.read_pickle("./principal_df9.pkl")
+dd_compiled_art= pd.read_pickle("./dd_compiled_art.pkl")
+dd_compiled = pd.read_pickle("./dd_compiled.pkl")
+cluster_results=pd.read_pickle("./cluster_results.pkl")
+drugs_art=pd.read_pickle("./drugs_art.pkl")
 
 drugs_art_app = [
     'Ziagen', 'Emtriva', 'Epivir', 'Viread', 'Retrovir', 'Pifeltro', 'Sustiva',
@@ -44,7 +44,7 @@ drugs_art_app = [
 ]
 
 #List of side-effects -----------------------------------------------------------
-side_effects_file = '/Users/mkocher/Desktop/ARTChat/data/side_effects_dash.txt'
+side_effects_file = './side_effects_dash.txt'
 side_effect_list = []
 with open(side_effects_file) as csv_file:
     csv_reader = csv.reader(csv_file,delimiter = ',')
